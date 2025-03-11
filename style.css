@@ -1,0 +1,70 @@
+:root {
+    --background-image: linear-gradient(to left, black, orange, crimson);
+    --color: wheat;
+    --text-align: center;
+    --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    --primary-font-size: 1.5rem;
+    --secondary-font-size: 2.5rem;
+}
+body {
+    background-image: var(--background-image);
+    color: var(--color);
+    padding: 0px;
+    margin: 0px;
+}
+@keyframes shadowEffect {
+    0% { text-shadow: 5px 5px 10px green;}
+    20% {text-shadow: 5px 5px 10px yellow;}
+    40% {text-shadow: 5px 5px 10px red;}
+    60% {text-shadow: 5px 5px 10px palevioletred;}
+    80% {text-shadow: 5px 5px 10px purple;}
+    100% {text-shadow: 5px 5px 10px orange;}
+}
+@keyframes colorChange{
+    0% {color:black;}
+    50% {color: white;}
+    100% {color: crimson;}
+}
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 1rem;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color);
+}
+.sticky-header h1 {
+    text-align: var(--text-align);
+    margin: 0px;
+    font-size: 2.5rem;
+    animation: shadowEffect 5s infinite, colorChange 3s infinite;
+}
+
+.section:hover {
+    transform: scale(1.02);
+}
+.section p {
+    font-size: var(--primary-font-size);
+}
+.section {
+    font-family: var(--font-family);
+    transition: transform 0.5s ease;
+    max-width: 800px;
+    padding: 2rem;
+    margin: 3rem auto;
+    text-align: var(--text-align);
+    border-left: 2px solid crimson;
+    border-bottom: 2px solid crimson;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 70px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+    background-color: rgba(255, 0, 0, 0.3);
+}
+.section li {
+    font-size: var(--primary-font-size);
+}
+.section h1 {
+    font-size: var(--secondary-font-size);
+}
